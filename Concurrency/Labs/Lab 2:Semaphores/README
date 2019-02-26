@@ -38,6 +38,7 @@ SOFTWARE.
         or 
 
         run the make command.
+        
 4. List of any required Libraries, platform issues, etc.
 
 #include "Semaphore.h"
