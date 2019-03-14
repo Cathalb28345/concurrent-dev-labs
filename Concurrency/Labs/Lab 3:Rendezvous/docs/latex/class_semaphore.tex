@@ -1,0 +1,64 @@
+\hypertarget{class_semaphore}{}\section{Semaphore Class Reference}
+\label{class_semaphore}\index{Semaphore@{Semaphore}}
+
+
+A \hyperlink{class_semaphore}{Semaphore} Implementation.  
+
+
+
+
+{\ttfamily \#include $<$Semaphore.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_semaphore_a0d9290d316636875ca85d1d78950a817}{Semaphore} (unsigned int ui\+Count=0)
+\item 
+void \hyperlink{class_semaphore_a72aabebf026e3a8b1f3e4d0fa8ee1eda}{Wait} ()
+\item 
+{\footnotesize template$<$typename R , typename P $>$ }\\bool \hyperlink{class_semaphore_a7f700173ae86ae623684109066e07656}{Wait} (const std\+::chrono\+::duration$<$ R, P $>$ \&cr\+Rel\+Time)
+\item 
+void \hyperlink{class_semaphore_a86f92f738b4486439b296d8e235895f2}{Signal} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_semaphore}{Semaphore} Implementation. 
+
+Uses C++11 features such as mutex and condition variables to implement \hyperlink{class_semaphore}{Semaphore} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_semaphore_a0d9290d316636875ca85d1d78950a817}\label{class_semaphore_a0d9290d316636875ca85d1d78950a817}} 
+\index{Semaphore@{Semaphore}!Semaphore@{Semaphore}}
+\index{Semaphore@{Semaphore}!Semaphore@{Semaphore}}
+\subsubsection{\texorpdfstring{Semaphore()}{Semaphore()}}
+{\footnotesize\ttfamily Semaphore\+::\+Semaphore (\begin{DoxyParamCaption}\item[{unsigned int}]{ui\+Count = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_semaphore_a86f92f738b4486439b296d8e235895f2}\label{class_semaphore_a86f92f738b4486439b296d8e235895f2}} 
+\index{Semaphore@{Semaphore}!Signal@{Signal}}
+\index{Signal@{Signal}!Semaphore@{Semaphore}}
+\subsubsection{\texorpdfstring{Signal()}{Signal()}}
+{\footnotesize\ttfamily void Semaphore\+::\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_semaphore_a72aabebf026e3a8b1f3e4d0fa8ee1eda}\label{class_semaphore_a72aabebf026e3a8b1f3e4d0fa8ee1eda}} 
+\index{Semaphore@{Semaphore}!Wait@{Wait}}
+\index{Wait@{Wait}!Semaphore@{Semaphore}}
+\subsubsection{\texorpdfstring{Wait()}{Wait()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Semaphore\+::\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_semaphore_a7f700173ae86ae623684109066e07656}\label{class_semaphore_a7f700173ae86ae623684109066e07656}} 
+\index{Semaphore@{Semaphore}!Wait@{Wait}}
+\index{Wait@{Wait}!Semaphore@{Semaphore}}
+\subsubsection{\texorpdfstring{Wait()}{Wait()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename R , typename P $>$ \\
+bool Semaphore\+::\+Wait (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::duration$<$ R, P $>$ \&}]{cr\+Rel\+Time }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_semaphore_8h}{Semaphore.\+h}\item 
+\hyperlink{_semaphore_8cpp}{Semaphore.\+cpp}\end{DoxyCompactItemize}

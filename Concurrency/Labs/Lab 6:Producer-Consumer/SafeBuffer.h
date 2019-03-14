@@ -43,7 +43,33 @@
  */
 
 /* Code: */
+//template <type T>
+//class SafeBuffer{
+//std::vector<T> theEvents;
+//public:
+//    SafeBuffer();
+//    ~SafeBuffer();
+//    int push(shared_ptr<T>);
+//    shared_ptr<T> pop();
+//
+//};
 
+
+#pragma once
+#include "Event.h"
+#include "Semaphore.h"
+#include <vector>
+
+class SafeBuffer{
+private:
+    std::vector<Event> theData;
+    std::shared_ptr<Semaphore> theMutex;
+    std::shared_ptr<Semaphore> theSemaphore;
+public:
+    SafeBuffer();
+    int push(Event);
+    Event pop();
+};
 
 
 /* SafeBuffer.h ends here */

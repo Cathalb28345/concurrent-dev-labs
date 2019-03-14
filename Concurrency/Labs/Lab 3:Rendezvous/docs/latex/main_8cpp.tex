@@ -1,0 +1,40 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include \char`\"{}Semaphore.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a456ff38e4b077f54fbe0aeef41edce3b}{task\+One} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ Semaphore1, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ Semaphore2, int delay)
+\item 
+void \hyperlink{main_8cpp_a0a8aa9d1171c7a9244fda2d221f9d0fd}{task\+Two} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ Semaphore1, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ Semaphore2, int delay)
+\begin{DoxyCompactList}\small\item\em displays a message that is split in to 2 sections to show how a rendezvous works. The second task arrives and sends a wait to the thread stopping if from continuing. Then it receives a signal from the other thread and is released. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Launch the threads \mbox{\Hypertarget{main_8cpp_a456ff38e4b077f54fbe0aeef41edce3b}\label{main_8cpp_a456ff38e4b077f54fbe0aeef41edce3b}} 
+\index{main.\+cpp@{main.\+cpp}!task\+One@{task\+One}}
+\index{task\+One@{task\+One}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{task\+One()}{taskOne()}}
+{\footnotesize\ttfamily void task\+One (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$}]{Semaphore1,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$}]{Semaphore2,  }\item[{int}]{delay }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a0a8aa9d1171c7a9244fda2d221f9d0fd}\label{main_8cpp_a0a8aa9d1171c7a9244fda2d221f9d0fd}} 
+\index{main.\+cpp@{main.\+cpp}!task\+Two@{task\+Two}}
+\index{task\+Two@{task\+Two}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{task\+Two()}{taskTwo()}}
+{\footnotesize\ttfamily void task\+Two (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$}]{Semaphore1,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$}]{Semaphore2,  }\item[{int}]{delay }\end{DoxyParamCaption})}
+
+
+
+displays a message that is split in to 2 sections to show how a rendezvous works. The second task arrives and sends a wait to the thread stopping if from continuing. Then it receives a signal from the other thread and is released. 
+

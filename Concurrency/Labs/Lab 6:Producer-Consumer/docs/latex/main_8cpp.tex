@@ -1,0 +1,59 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include \char`\"{}Event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Safe\+Buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a3d0719b4bcba12452a2f7b9b40c6c6d9}{producer} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_safe_buffer}{Safe\+Buffer} $>$ the\+Buffer, int \hyperlink{main_8cpp_a6271715a402e63d699938f0d2ad53f44}{num\+Loops})
+\item 
+void \hyperlink{main_8cpp_a279a06d7a4fa4c1a824324bbd87e848d}{consumer} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_safe_buffer}{Safe\+Buffer} $>$ the\+Buffer, int \hyperlink{main_8cpp_a6271715a402e63d699938f0d2ad53f44}{num\+Loops})
+\item 
+int \hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{main_8cpp_aab938108caad0d0e47d6885b5ba2d23a}{size} =5
+\item 
+int \hyperlink{main_8cpp_a6271715a402e63d699938f0d2ad53f44}{num\+Loops} = 4
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a279a06d7a4fa4c1a824324bbd87e848d}\label{main_8cpp_a279a06d7a4fa4c1a824324bbd87e848d}} 
+\index{main.\+cpp@{main.\+cpp}!consumer@{consumer}}
+\index{consumer@{consumer}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{consumer()}{consumer()}}
+{\footnotesize\ttfamily void consumer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_safe_buffer}{Safe\+Buffer} $>$}]{the\+Buffer,  }\item[{int}]{num\+Loops }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Launch the threads \mbox{\Hypertarget{main_8cpp_a3d0719b4bcba12452a2f7b9b40c6c6d9}\label{main_8cpp_a3d0719b4bcba12452a2f7b9b40c6c6d9}} 
+\index{main.\+cpp@{main.\+cpp}!producer@{producer}}
+\index{producer@{producer}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{producer()}{producer()}}
+{\footnotesize\ttfamily void producer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_safe_buffer}{Safe\+Buffer} $>$}]{the\+Buffer,  }\item[{int}]{num\+Loops }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a6271715a402e63d699938f0d2ad53f44}\label{main_8cpp_a6271715a402e63d699938f0d2ad53f44}} 
+\index{main.\+cpp@{main.\+cpp}!num\+Loops@{num\+Loops}}
+\index{num\+Loops@{num\+Loops}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{num\+Loops}{numLoops}}
+{\footnotesize\ttfamily int num\+Loops = 4}
+
+\mbox{\Hypertarget{main_8cpp_aab938108caad0d0e47d6885b5ba2d23a}\label{main_8cpp_aab938108caad0d0e47d6885b5ba2d23a}} 
+\index{main.\+cpp@{main.\+cpp}!size@{size}}
+\index{size@{size}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily const int size =5}
+

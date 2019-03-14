@@ -1,3 +1,7 @@
+// #Cathal Brady 
+// #Student Number : C00202493 
+// # Date of creation  : 14 /  02 / 19 
+ 
 #include "Barrier.h"
 #include <iostream>
 #include <thread>
@@ -12,15 +16,15 @@ int sharedVariable=0;
     \brief An example of using a reusable barrier
 */
 /*! displays a message that is split in to 2 sections to show how a rendezvous works*/
-void barrierTask(std::shared_ptr<Barrier> theBarrier, int numLoops){
+void barrierTask(std::shared_ptr<Barrier> newBarrier, int numLoops){
 
   for(int i=0;i<numLoops;++i){
-    //Do first bit of task
+    //Do first instruction 
     std::cout << "A"<< i;
-    //Barrier
-    theBarrier.wait();
-    //Do second half of task
-    std::cout<< "B" << i;
+    //Set barrer then wait till comletion 
+    newBarrier.wait();
+    //Do next step and out Z when the first step is complete
+    std::cout<< "Z" << i;
   }
   
 

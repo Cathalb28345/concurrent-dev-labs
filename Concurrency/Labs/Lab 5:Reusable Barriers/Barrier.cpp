@@ -1,52 +1,47 @@
-// Barrier.cpp --- 
-// 
-// Filename: Barrier.cpp
-// Description: 
-// Author: Joseph
-// Maintainer: 
-// Created: Tue Jan  8 12:14:02 2019 (+0000)
-// Version: 
-// Package-Requires: ()
-// Last-Updated: Tue Jan  8 12:15:21 2019 (+0000)
-//           By: Joseph
-//     Update #: 2
-// URL: 
-// Doc URL: 
-// Keywords: 
-// Compatibility: 
-// 
-// 
+/*! \fn Barrier.cpp
+    \brief An Implementation of Barrier.h to introduce a barrier for the main method
+    #Cathal Brady 
+      #Student Number : C00202493 
+*/
 
-// Commentary: 
-// 
-// 
-// 
-// 
-
-// Change Log:
-// 
-// 
-// 
-// 
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or (at
-// your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful, but
-// WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// General Public License for more details.
-// 
-// You should have received a copy of the GNU General Public License
-// along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
-// 
-// 
-
-// Code:
 #include "Semaphore.h"
 #include "Barrier.h"
+#include <iostream>
 
 
-// 
-// Barrier.cpp ends here
+/*! Constructor Method*/
+Barrier::Barrier(int numOfThreads) : numThreads(numOfThreads),
+				semaphore1(std::shared_ptr<Semaphore>(new Semaphore(0))),
+				semaphore2(std::shared_ptr<Semaphore>(new Semaphore(1))),
+				mutexlock(std::shared_ptr<Semaphore>(new Semaphore(1))){
+}
+/*! Wait Method*/
+void Barrier::Wait()
+{
+      mutexLock->Wait();
+      count++;
+
+      if(count == numThreads) {
+	semaphore2->Wait();
+	semaphore1->Signal();
+      }
+      mutexLock->Signal();
+
+	semaphore1->Wait();
+	semaphore1->Signal();
+
+      mutexLock->Wait();
+      count--;
+
+      if(count == 0) {
+	semaphore1->Wait();
+	semaphore2->Signal();
+      }
+      mutexLock->Signal();
+
+	semaphore2->Wait();
+	semaphore2->Signal();
+}
+/*! Destructor method  destroy barrior*/
+Barrier::~Barrier() {
+}
